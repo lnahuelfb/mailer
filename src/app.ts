@@ -63,12 +63,10 @@ app.post('/send-email', (req: Request, res: Response) => {
       .json(req.body)
   })
 
-  console.log(req.body)
-
   transporter.close()
   return res.status(201)
 })
 
 app.listen(port, () => {
-  console.log(`Server running at http://localhost:${port}`);
+  console.log(`Server running at Port: ${port}`);
 })
