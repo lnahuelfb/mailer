@@ -7,12 +7,12 @@ const app = express()
 const port = process.env.PORT || 3000
 
 const options: SMTPTransport['options'] = {
-  host: process.env.HOST,
+  host: String(process.env.HOST),
   port: Number(process.env.NODEMAILER_PORT),
   secure: Boolean(process.env.SECURE),
   auth: {
-    user: process.env.EMAIL,
-    pass: process.env.PASSWORD
+    user: String(process.env.EMAIL),
+    pass: String(process.env.PASSWORD)
   }
 }
 
