@@ -13,7 +13,7 @@
     "nodemailer": "^6.9.11"
   },
   "scripts": {
-    "start": "ts-node src/app.ts",
+    "start": "ts-node api/index.ts",
     "build": "tsc",
     "serve": "node dist/index.js"
   }

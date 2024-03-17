@@ -70,3 +70,5 @@ app.post('/send-email', (req: Request, res: Response) => {
 app.listen(port, () => {
   console.log(`Server running at Port: ${port}`);
 })
+
+export default app
