@@ -18,7 +18,7 @@ const options: SMTPTransport['options'] = {
 
 app.use(express.json())
 
-app.get('/send-email', (req: Request, res: Response) => {
+app.get('/send-email', (_req: Request, res: Response) => {
   return res.send({
     message: 'Hola mundo!'
   })
