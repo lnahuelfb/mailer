@@ -29,6 +29,8 @@ app.post('/send-email', (req: Request, res: Response) => {
 
   const transporter = nodemailer.createTransport(options)
 
+  console.log(req.body)
+
   const mailOptions = {
     from: name,
     to: 'lnahuelfernandezb@gmail.com',
@@ -59,7 +61,7 @@ app.post('/send-email', (req: Request, res: Response) => {
     }
     console.log('Email enviado!')
     return res
-      .status(200)
+      .status(201)
       .json(req.body)
   })
 
